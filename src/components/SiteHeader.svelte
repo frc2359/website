@@ -21,7 +21,7 @@
         grid-template-columns: 20vw 80vw;
         align-items: center;
         justify-content: center;
-        height: 10vh;
+        height: 12vh;
         top: 0;
         margin-top: 0;
         margin-bottom: 0;
