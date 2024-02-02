@@ -4,8 +4,8 @@
         <a href="/">Home</a>
         <a href="/competition">Competitions</a>
         <a href="/robots">Robots</a>
-        <a href="/sponsors">Sponsors</a>
-        <a href="https://github.com/frc2359" style='display:flex'><img style='align-self:center' src="../github-mark-white.png" alt='Github Logo'></a>
+        <a href="/#sponsors">Sponsors</a>
+        <a href="https://github.com/frc2359" target="_blank" style='display:flex'><img style='align-self:center' src="../github-mark-white.png" alt='Github Logo'></a>
     </div>
 </div>
 
@@ -15,7 +15,7 @@
         z-index: 999;
         backdrop-filter: invert(10%) blur(9px);
         position: fixed;
-        background-color: var(--gray-200-glass);
+        background-image: var(--gray-200-glass);
         width: 100vw;
         display: grid;
         grid-template-columns: 20vw 80vw;
@@ -49,6 +49,7 @@
     }
     .right a {
         display: block;
+		font-family: 'Rockwell', 'Arvo', 'sans-serif';
         color: var(--green-300);
         align-self: center;
         font-size: 4vh;

@@ -19,9 +19,35 @@
 	
 	<div class="second">
 		<h1><span>ONE</span> step at a time</h1>
-		<p>Resillence, inginuity, teamwork, effort. Our goal is to create a commnuity of students prepared to tackle the 
-			challenges of tomorrow, from the ground up. 3 months, one robot. Are you ready?</p>
-		<img src="../images/_MG_9558.JPG" class="carou_img" alt="">
+		<p>Resillence, inginuity, teamwork, effort. Our goal is to create a commnuity of students prepared to tackle the challenges of tomorrow, from the ground up.
+			 3 months, one robot. Are you ready?</p>
+		<div class="sizzle">
+			<div class="item">
+				<span class="material-symbols-outlined">
+					diversity_3
+				</span>
+				<p>Teamwork Skills</p>
+			</div>
+			<div class="item">
+				<span class="material-symbols-outlined">
+					engineering
+				</span>
+				<p>Engineering Skills</p>
+			</div>
+			<div class="item">
+				<span class="material-symbols-outlined">
+					flag
+				</span>
+				<p>Workforce Development</p>
+			</div>
+		</div>
+			
+		<img src="../images/sidebyside.jpg" alt="">
+	</div>
+
+	<div class="third">
+		<h1>Making it <span>possible</span></h1>
+		<p>Sponsors help support us, and make everything we do possible.</p>
 	</div>
 
 </div>
@@ -32,6 +58,10 @@
 	}
 	h1 span {
 		color: var(--green-200);
+	}
+	p {
+		line-height: 1.5;
+		font-size: 2.5vh;
 	}
 	.first {
 		margin: 0;
@@ -58,22 +88,71 @@
 	.second{
 		display: grid;
 		grid-template-columns: 50vw 50vw;
-		grid-template-rows: 10vh 80vh;
+		grid-template-rows: 20vh 70vh;
 	}
-	.second h1 {
+	.second h1, .third h1 {
 		grid-row: 1;
 		grid-column: 1;
+		padding-top: 5vh;
+		padding-left: 4vw;
 	}
 	.second > p {
 		grid-row: 2;
 		grid-column: 1;
+		padding-left: 4vw;
+		line-height: 1.5;
 		font-size: 2.5vh;
+	}
+	.second > .sizzle {
+		grid-row: 2;
+		grid-column: 1;
+		align-self: center;
+		justify-self: center;
+		/* background-color: green; */
+		width: 40vw;
+		text-align: center;
+		height: 20vh;
+		display: flex;
+		flex-direction: row;
+		justify-items: space-between;
+	}
+	.second > .sizzle > .item {
+		display: flex;
+		/* background-color: #8a5151; */
+		padding-left: 2vw;
+		padding-right: 2vw;
+		width: calc(40vw/3);
+		flex-direction: column;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		border-right: 2px solid white;
+	}
+	.second > .sizzle > .item:last-child {
+		border-right: 0px solid white;
+
+	}
+	.second > .sizzle > .item > span {
+		font-size: 10vh;
+		color: var(--green-200);
+		justify-self: center;
+	}
+	.second > .sizzle > .item > p {
+		font-size: 2.5vh;
+		justify-self: center;
 	}
 	.second > img {
 		grid-row: 1/ span 2;
 		grid-column: 2;
-		width: 20vw;
+		width: 45vw;
+		object-fit: cover;
 		height: 90vh;
 		justify-self: end;
+	}
+	.third {
+		height: 60vh;
+	}
+	.third > p {
+		padding-left: 4vw;
 	}
 </style>

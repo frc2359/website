@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/icon.ico" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />		<title>Team 2359 - RoboLobos</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+		<title>Team 2359 - RoboLobos</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
@@ -19,14 +23,11 @@
 	}
 	h1 {
 		font-family: 'Rockwell', 'Arvo', 'sans-serif';
-		font-size: 5vh;
-		padding-left: 2vw;
+		font-size: 7vh;
 	}
 	p, a {
-		font-family: 'Rockwell', 'Arvo', 'sans-serif';
+		font-family: 'Work Sans', 'Helvetica', 'sans-serif';
 		font-size: 2vh;
-		padding-left: 2vw;
-
 	}
 	html, body {
 		--green-400: #acf11b;
@@ -43,5 +44,12 @@
 		color: white;
 		width: 100vw;
 		overflow-x: hidden;
+	}
+	:global(.material-symbols-outlined) {
+		font-variation-settings:
+			'FILL' 1,
+			'wght' 400,
+			'GRAD' 0,
+			'opsz' 24
 	}
 </style>
