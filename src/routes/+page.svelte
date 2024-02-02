@@ -18,7 +18,7 @@
 	</div>
 	
 	<div class="second">
-		<h1><span>ONE</span> step at a time</h1>
+		<h1><span>One</span> step at a time</h1>
 		<p>Resillence, inginuity, teamwork, effort. Our goal is to create a commnuity of students prepared to tackle the challenges of tomorrow, from the ground up.
 			 3 months, one robot. Are you ready?</p>
 		<div class="sizzle">
@@ -45,9 +45,15 @@
 		<img src="../images/sidebyside.jpg" alt="">
 	</div>
 
-	<div class="third">
+	<div class="third" id='sponsors'>
 		<h1>Making it <span>possible</span></h1>
 		<p>Sponsors help support us, and make everything we do possible.</p>
+		<div class="sponsorimgs">
+			<img src="../images/boeing.png" alt="">
+			<img src="../images/raytheon.png" alt="">
+			<img src="../images/Reversed_DoDSTEM_Logo.png" alt="">
+		</div>
+		
 	</div>
 
 </div>
@@ -154,5 +160,16 @@
 	}
 	.third > p {
 		padding-left: 4vw;
+	}
+	.third .sponsorimgs {
+		height: 40vh;
+		padding-left: 5vw;
+		width: 90vw;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.third .sponsorimgs > img {
+		height: 20vh;
 	}
 </style>
