@@ -7,9 +7,9 @@
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { browser } from "$app/environment";
 
-	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		if(browser) {
 			gsap.from('#mark', {fontSize: '15vh'});
 			gsap.from('#markimg', {width: '45vw'});
