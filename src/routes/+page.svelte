@@ -5,26 +5,29 @@
 	import Carousel from 'svelte-carousel';
 	import { onMount } from "svelte";
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { browser } from "$app/environment";
 
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
-		gsap.from('#mark', {fontSize: '15vh'});
-		gsap.from('#markimg', {width: '45vw'});
-		gsap.from('.carou_img', {filter: 'blur(20px)'});
+		if(browser) {
+			gsap.from('#mark', {fontSize: '15vh'});
+			gsap.from('#markimg', {width: '45vw'});
+			gsap.from('.carou_img', {filter: 'blur(20px)'});
 
-		gsap.timeline({
-			scrollTrigger: {
-				trigger: '.first',
-				start:'top top',
-				end:'bottom bottom',
-				endTrigger: '#hero1',
-				scrub: 1
-			}
-		})
-		.to('#mark', {fontSize: '15vh'}, 0)
-		.to('#markimg', {width: '45vw'}, 0)
-		.to('.carou_img', {filter: 'blur(20px)'}, 0)
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: '.first',
+					start:'top top',
+					end:'bottom bottom',
+					endTrigger: '#hero1',
+					scrub: 1
+				}
+			})
+			.to('#mark', {fontSize: '15vh'}, 0)
+			.to('#markimg', {width: '45vw'}, 0)
+			.to('.carou_img', {filter: 'blur(20px)'}, 0)
+		}
 	});
 
 </script>
