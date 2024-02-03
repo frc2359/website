@@ -1,11 +1,34 @@
 <script>
+	import gsap from "gsap";
 	import SiteHeader from "../components/SiteHeader.svelte";
 	// @ts-ignore
 	import Carousel from 'svelte-carousel';
+	import { onMount } from "svelte";
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMount(() => {
+		gsap.from('#mark', {fontSize: '15vh'});
+		gsap.from('#markimg', {width: '45vw'});
+		gsap.from('.carou_img', {filter: 'blur(20px)'});
+
+		gsap.timeline({
+			scrollTrigger: {
+				trigger: '.first',
+				start:'top top',
+				end:'bottom bottom',
+				endTrigger: '#hero1',
+				scrub: 1
+			}
+		})
+		.to('#mark', {fontSize: '15vh'}, 0)
+		.to('#markimg', {width: '45vw'}, 0)
+		.to('.carou_img', {filter: 'blur(20px)'}, 0)
+	});
 
 </script>
 <SiteHeader></SiteHeader>
-
 <div class="page">
 	<div class="first">
 		<Carousel autoplay autoplayDuration={5000} autoplayProgressVisible pauseOnFocus arrows={false}>
@@ -14,7 +37,7 @@
 			<img src="../images/_MG_9316.JPG" class="carou_img" alt="">
 			<img src="../images/_MG_9042.JPG" class="carou_img" alt="">
 		</Carousel>
-		<h1>WE ARE <span><img src="../rbolobo_wh_cl.svg" style="width: 30vw" alt="logo"></span></h1>
+		<h1 id='mark'>WE ARE <span><img id='markimg' src="../rbolobo_wh_cl.svg" alt="logo"></span></h1>
 	</div>
 	
 	<div class="second">
@@ -49,9 +72,10 @@
 		<h1>Making it <span>possible</span></h1>
 		<p>Sponsors help support us, and make everything we do possible.</p>
 		<div class="sponsorimgs">
-			<img src="../images/boeing.png" alt="">
+			<p>Coming soon!</p>
+			<!-- <img src="../images/boeing.png" alt="">
 			<img src="../images/raytheon.png" alt="">
-			<img src="../images/Reversed_DoDSTEM_Logo.png" alt="">
+			<img src="../images/Reversed_DoDSTEM_Logo.png" alt=""> -->
 		</div>
 		
 	</div>
@@ -82,7 +106,9 @@
 		margin-top: 30vh;
 		width: 100vw;
 		text-align: center;
-
+	}
+	.first #markimg {
+		width: 30vw;
 	}
 	.carou_img {
 		max-height: 90vh;
@@ -132,7 +158,7 @@
 		justify-content: center;
 		justify-items: center;
 		align-items: center;
-		border-right: 2px solid white;
+		border-right: 2px solid rgb(87, 87, 87);
 	}
 	.second > .sizzle > .item:last-child {
 		border-right: 0px solid white;

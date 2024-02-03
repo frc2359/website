@@ -2,8 +2,8 @@
     <img class='left' src="../rbolobo_wh_cl.svg" style="width: 20vw" alt="logo">
     <div class='right tall'>
         <a href="/">Home</a>
-        <a href="/robots">Robots</a>
         <a href="/#sponsors">Sponsors</a>
+        <a href="/robots">Robots</a>
         <a href="/docs">Docs</a>
         <a href="https://github.com/frc2359" target="_blank" style='display:flex'><img style='align-self:center' src="../github-mark-white.png" alt='Github Logo'></a>
     </div>
